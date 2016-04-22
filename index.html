@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Oficina Git</title>
+		<title>Git Bootcamp</title>
 
-		<meta name="description" content="Oficina Git: uma oficina de controle de versão para iniciantes.">
+		<meta name="description" content="Git Bootcamp">
 		<meta name="author" content="Erick Mendonça">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 		<link rel="shortcut icon" href="./favicon.ico" />
 
@@ -47,13 +47,13 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Oficina <i class="fa fa-git"></i></h1>
-					<p>
-						<small>Criado por <a href="http://erickmendonca.com.br">Erick Mendonça</a></small>
-					</p>
-					<p>
-						<a href="https://goo.gl/tlonw9" target="_blank">Em abril e maio de 2016 estará rolando um curso presencial: inscreva-se!</a>
+				<section data-background="#111111">
+					<h1 class="color-white"><i class="fa fa-git"></i> Bootcamp</h1>
+					<p class="color-white">
+						<small>
+							Dispónível na web em <a class="color-white" href="http://j.mp/gitbootcamp-se">http://j.mp/gitbootcamp-se</a> <br/>
+							Criado por <a href="http://erickmendonca.com.br" class="color-white">Erick Mendonça</a>
+						</small>
 					</p>
 				</section>
 
@@ -61,7 +61,6 @@
 					<div class="color-white">
 						<h2 class="color-white">Hello!</h2>
 						<p>
-							<p class="fragment"><i class="fa fa-user-secret"></i> Ninja</p>
 							<p class="fragment">Full Stack Developer</p>
 							<p class="fragment">GDG Aracaju Co-organizer</p>
 							<p class="fragment">
@@ -75,30 +74,47 @@
 				</section>
 
 				<section>
+					<h2>First things first</h2>
+					<p class="fragment">Senha da WiFi</p>
+					<p class="fragment">Instalação do Git</p>
+					<p class="fragment">Apresentações</p>
+				</section>
+
+				<section>
 					<h2>Agenda</h2>
+					<h3><i class="fa fa-git"></i></h3>
 					<ul>
-						<li class="fragment"><i class="fa fa-git"></i>
-							<ul>
-								<li>O que é?</li>
-								<li>Como usar?</li>
-							</ul>
-						</li>
-						<li class="fragment"><i class="fa fa-github-square"></i>
-							<ul>
-								<li>O que é?</li>
-								<li>Como usar?</li>
-							</ul>
-						</li>
+						<li>Sistemas de controle de versão</li>
+						<li>Por que usar o Git?</li>
+						<li>Instalação e configuração inicial</li>
+						<li>Comandos básicos</li>
+						<li>Conceito de staging area</li>
+						<li>Como criar versões do seu projeto</li>
+						<li>Como desfazer alterações</li>
+						<li>Enviando seu projeto para um servidor</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<h3><i class="fa fa-github"></i></h3>
+					<ul>
+						<li>Baixando projetos de um servidor</li>
+						<li>Merge e rebase</li>
+						<li>Resolvendo conflitos</li>
+						<li>Estratégias para fluxo de trabalho</li>
+						<li>Colaborando com projetos open source</li>
+						<li>Como manter um repositório</li>
+						<li>GitHub, Bitbucket e outros serviços</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>O que é?</h2>
-						<p>Controle de versão <b>distribuído</b></p>
-						<p><b>Gratuito</b> e open source</p>
-						<p>Inicialmente desenvolvido por <b>Linus Torvalds</b></p>
-						<p>Licença: GNU GPL v2</p>
-						<p>Lançado em 07 de abril de 2005</p>
+						<p class="fragment">Controle de versão <b>distribuído</b></p>
+						<p class="fragment"><b>Gratuito</b> e open source</p>
+						<p class="fragment">Inicialmente desenvolvido por <b>Linus Torvalds</b></p>
+						<p class="fragment">Lançado em 2005 sob a licença GNU GPL v2</p>
 				</section>
 
 				<section>
@@ -108,13 +124,13 @@
 
 				<section>
 					<p>
-						Controle de versão é um sistema que registra as alterações em um arquivo ou conjunto de arquivos.
+						Controle de versão é um sistema que <b>registra as alterações</b> em um arquivo ou conjunto de arquivos.
 					</p>
-					<p>
-						Permite que você possa recuperar versões anteriores dos arquivos.
+					<p class="fragment">
+						Permite que você possa <b>recuperar versões</b> anteriores dos arquivos.
 					</p>
-					<p>
-						Podem ser usados com outros tipos de arquivos além de código-fonte.
+					<p class="fragment">
+						Podem ser usados com <b>outros tipos</b> de arquivos além de código-fonte.
 					</p>
 				</section>
 
@@ -171,7 +187,16 @@
 					<h1 class="color-white">Calma!</h1>
 				</section>
 
-				<section data-background="./images/well-here-we-are.gif">
+				<section>
+					<h2>config</h2>
+					<p>O comando git config te permite alterar algumas configurações de sua instalação Git.</p>
+					<p>&nbsp;</p>
+					<code>git config <b><i>opções</i></b></code>
+				</section>
+				<section>
+					<code class="fragment">git config --global user.name <b>"Meu nome"</b></code>
+					<br><br>
+					<code class="fragment">git config --global user.email <b>meu@email</b></code>
 				</section>
 
 				<section>
@@ -179,28 +204,7 @@
 					<p>O comando git init inicia um novo repositório.</p>
 					<p>Se não for informada uma <i>pasta</i>, ele cria no diretório atual!</p>
 					<p>&nbsp;</p>
-					<code>git init :pasta</code>
-				</section>
-
-				<section>
-					<h2>clone</h2>
-					<p>O comando git clone cria uma cópia local de um repositório Git.</p>
-					<p>É o método mais comum de obter o código de alguém!</p>
-					<p>&nbsp;</p>
-					<code>git clone :repositório :pasta</code>
-				</section>
-
-
-				<section>
-					<h2>config</h2>
-					<p>O comando git config te permite alterar algumas configurações de sua instalação Git.</p>
-					<p>&nbsp;</p>
-					<code>git config :opções</code>
-				</section>
-				<section>
-					<code>git config --global user.name "Meu nome"</code>
-					<br><br>
-					<code>git config --global user.email Meu@email</code>
+					<code>git init <b><i>pasta</i></b></code>
 				</section>
 
 				<section>
@@ -446,6 +450,14 @@
 				</section>
 
 				<section>
+					<h2>clone</h2>
+					<p>O comando git clone cria uma cópia local de um repositório Git.</p>
+					<p>É o método mais comum de obter o código de alguém!</p>
+					<p>&nbsp;</p>
+					<code>git clone :repositório :pasta</code>
+				</section>
+
+				<section>
 				  <h2>remote</h2>
 				  <p>O comando git remote permite gerenciar as conexões remotas do seu repositório.</p>
 				  <p>&nbsp;</p>
@@ -532,7 +544,7 @@
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [
