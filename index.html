@@ -51,7 +51,7 @@
 					<h1 class="color-white"><i class="fa fa-git"></i> Bootcamp</h1>
 					<p class="color-white">
 						<small>
-							Dispónível na web em <a class="color-white" href="http://j.mp/gitbootcamp-se">http://j.mp/gitbootcamp-se</a> <br/>
+							Disponível na web em <a class="color-white" href="http://j.mp/gitbootcamp-slides">http://j.mp/gitbootcamp-slides</a> <br/>
 							Criado por <a href="http://erickmendonca.com.br" class="color-white">Erick Mendonça</a>
 						</small>
 					</p>
@@ -211,14 +211,14 @@
 					<h2>add</h2>
 					<p>O comando git add te permite selecionar quais arquivos serão salvos no controle de versão.</p>
 					<p>&nbsp;</p>
-					<code>git add :arquivo/pasta</code>
+					<code>git add <b><i>arquivo/pasta</i></b></code>
 				</section>
 
 				<section>
 				  <h2>commit</h2>
 				  <p>O comando git commit pega os arquivos selecionados e os salvam no histórico do projeto.</p>
 				  <p>&nbsp;</p>
-				  <code>git commit -m :mensagem</code>
+				  <code>git commit -m <b><i>mensagem</i></b></code>
 				</section>
 
 				<section>
@@ -256,7 +256,7 @@
 				  <h2>log</h2>
 				  <p>O comando git log permite inspecionar o histórico do projeto.</p>
 				  <p>&nbsp;</p>
-				  <code>git log :opções</code>
+				  <code>git log <b><i>opções</i></b></code>
 				</section>
 
 				<section>
@@ -271,21 +271,21 @@
 				  <h2>checkout</h2>
 				  <p>O comando git checkout possui vários usos: checar arquivos, commits e branches.</p>
 				  <p>&nbsp;</p>
-				  <code>git checkout :commit/branch</code>
+				  <code>git checkout <b><i>commit/branch</i></b></code>
 				</section>
 
 				<section>
 				  <h2>revert</h2>
 				  <p>O comando git revert desfaz um commit salvo, mas sem alterar o histórico do projeto.</p>
 				  <p>&nbsp;</p>
-				  <code>git revert :commit</code>
+				  <code>git revert <b><i>commit</i></b></code>
 				</section>
 
 				<section>
 				  <h2>reset</h2>
 				  <p>O comando git reset desfaz alterações em arquivos na pasta de trabalho.</p>
 				  <p>&nbsp;</p>
-				  <code>git reset :opções :arquivo</code>
+				  <code>git reset <b><i>opções arquivo</i></b></code>
 				</section>
 
 				<section>
@@ -298,31 +298,30 @@
 
 				<section>
 				  <h2>clean</h2>
-				  <p>O comando git clean remove arquivos que não estão no repositório da pasta de trabalho.
-</p>
+				  <p>O comando git clean remove arquivos que não estão no repositório da pasta de trabalho.</p>
 				  <p>&nbsp;</p>
-				  <code>git clean :opções</code>
+				  <code>git clean <b><i>opções</i></b></code>
 				</section>
 
 				<section>
 				  <h2>branch</h2>
 				  <p>O comando git branch permite criar ambientes de desenvolvimento isolados dentro do mesmo repositório.</p>
 				  <p>&nbsp;</p>
-				  <code>git branch :nome</code>
+				  <code>git branch <b><i>nome</i></b></code>
 				</section>
 
 				<section>
 				  <h2>merge</h2>
 				  <p>O comando git merge é uma forma poderosa de integrar mudanças em branches diferentes.</p>
 				  <p>&nbsp;</p>
-				  <code>git merge :opções :branch</code>
+				  <code>git merge <b><i>opções branch</i></b></code>
 				</section>
 
 				<section>
 				  <h2>rebase</h2>
 				  <p>O comando git rebase permite mover branches, alterando o histórico para que seja mais linear.</p>
 				  <p>&nbsp;</p>
-				  <code>git rebase :base</code>
+				  <code>git rebase <b><i>base</i></b></code>
 				</section>
 
 				<section data-background="./images/revision-cat.gif">
@@ -411,7 +410,7 @@
 					<p>
 						&nbsp;
 					</p>
-					<code>git diff :opções</code>
+					<code>git diff <b><i>opções</i></b></code>
 				</section>
 
 				<section>
@@ -454,28 +453,28 @@
 					<p>O comando git clone cria uma cópia local de um repositório Git.</p>
 					<p>É o método mais comum de obter o código de alguém!</p>
 					<p>&nbsp;</p>
-					<code>git clone :repositório :pasta</code>
+					<code>git clone <b><i>repositório pasta</i></b></code>
 				</section>
 
 				<section>
 				  <h2>remote</h2>
 				  <p>O comando git remote permite gerenciar as conexões remotas do seu repositório.</p>
 				  <p>&nbsp;</p>
-				  <code>git remote :opções</code>
+				  <code>git remote <b><i>opções</i></b></code>
 				</section>
 
 				<section>
 				  <h2>fetch</h2>
 				  <p>O comando git fetch baixa uma branch de outro repositório remoto, como todos os commits e arquivos.</p>
 				  <p>&nbsp;</p>
-				  <code>git fetch :remote :branch</code>
+				  <code>git fetch <b><i>remote branch</i></b></code>
 				</section>
 
 				<section>
 				  <h2>pull</h2>
 				  <p>O comando git pull é uma automatização: ele faz o fetch do repo remoto e o merge com o branch atual.</p>
 				  <p>&nbsp;</p>
-				  <code>git pull :opções :remote :branch</code>
+				  <code>git pull <b><i>opções remote branch</i></b></code>
 				</section>
 
 				<section>
@@ -483,7 +482,7 @@
 				  <p>O comando git push move uma branch local para outro repositório.</p>
 				  <p>Envia o seu código para outro lugar!</p>
 				  <p>&nbsp;</p>
-				  <code>git push :remote :branch</code>
+				  <code>git push <b><i>remote branch</i></b></code>
 				</section>
 
 				<section data-background="./images/github-desktop.png">
