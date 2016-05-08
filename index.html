@@ -90,7 +90,7 @@
 					<h1 class="color-white"><i class="fa fa-git"></i> Bootcamp</h1>
 					<p class="color-white">
 						<small>
-							Disponível na web em <a class="color-white" href="http://j.mp/gitbootcamp-slides">http://j.mp/gitbootcamp-slides</a> <br/>
+							Disponível na web em <a class="color-white" href="http://git-bootcamp.github.io/slides/">http://git-bootcamp.github.io/slides/</a> <br/>
 							Criado por <a href="http://erickmendonca.com.br" class="color-white">Erick Mendonça</a>
 						</small>
 					</p>
@@ -114,7 +114,7 @@
 
 				<section>
 					<h2>First things first</h2>
-					<p class="fragment"><i class="fa fa-wifi"></i> Senha da WiFi</p>
+					<p class="fragment"><i class="fa fa-wifi"></i> Senha da WiFi: <code>coworking</code></p>
 					<p class="fragment"><i class="fa fa-laptop"></i> Instalação do Git</p>
 					<p class="fragment">Apresentações</p>
 				</section>
@@ -544,6 +544,92 @@
 				  <p>Envia o seu código para outro lugar!</p>
 				  <p>&nbsp;</p>
 				  <code><i class="blink_text fa fa-terminal"></i> git push <b><i>remote branch</i></b></code>
+				</section>
+
+				<section>
+					<h2>Exercícios</h2>
+					<p><a href="https://github.com/git-bootcamp/git-bootcamp.github.io">git-bootcamp/git-bootcamp.github.io</a></p>
+					<ul>
+						<li>Fork</li>
+						<li>Commit</li>
+						<li>Push</li>
+						<li>Pull Request</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The Centralized Workflow</h2>
+					<p>Bom para pequenos times</p>
+					<p>Todos desenvolvedores tem permissão de escrita no servidor</p>
+					<p>Vira uma bagunça com muitas pessoas!</p>
+				</section>
+
+				<section>
+					<h2>The Integrator Workflow</h2>
+					<p>Um pouco mais complexo</p>
+					<p>Oferece muito mais versatilidade e segurança</p>
+				</section>
+
+				<section>
+					<h2>Git Flow</h2>
+					<a href="./images/git-model@2x.png">
+						<img src="./images/git-model@2x.png" target="_blank">
+					</a>
+				</section>
+
+				<section>
+					<h2>Git Flow</h2>
+					<p>Permanent branches</p>
+					<p>Topic branches</p>
+				</section>
+
+				<section>
+					<h2>Cuidado com branches antigas</h2>
+					<p>Código não "mesclado" (merge) pode ter bugs antigos não percebidos!</p>
+					<p class="fragment">Atualize e teste suas branches de longa duração</p>
+					<p class="fragment">ou<br>use feature toggles</p>
+				</section>
+
+				<section>
+					<h2>Criando seu próprio servidor <i class="fa fa-git"></i></h2>
+					<ul>
+						<li>Certifique-se que tem o git instalado<br>sudo apt-get install git-core</li>
+						<li>Crie o seu repositório<br>git init --bare</li>
+						<li>Adicione o remote<br>git remote add origin pi@192.168.1.108:/home/pi/git/myFirstRepository</li>
+					</ul>
+					<br>
+					<small><a href="http://monkeyhacks.com/post/raspberry-pi-as-private-git-server">Fonte: Monkey Hacks</a></small>
+				</section>
+
+				<section>
+					<h2>Comandos úteis</h2>
+					<code><i class="blink_text fa fa-terminal"></i> git log --stat</code>
+					<p>Imprime o log com o diffstat de cada commit.</p>
+				</section>
+
+				<section>
+					<h2>Comandos úteis</h2>
+					<code><i class="blink_text fa fa-terminal"></i> git reset --hard HEAD</code>
+					<p>Volta todas os arquivos versionados para o commit mais recente.</p>
+				</section>
+
+				<section>
+					<h2>Comandos úteis</h2>
+					<code><i class="blink_text fa fa-terminal"></i> git clean -f</code>
+					<p>Limpa o repositório de todos os arquivos não versionados (cuidado!).</p>
+				</section>
+
+				<section>
+					<h2>Comandos úteis</h2>
+					<code><i class="blink_text fa fa-terminal"></i> git checkout HEAD <b><i>file</i></b></code>
+					<p>Volta o arquivo <b><i>file</i></b> para sua versão mais recente.</p>
+				</section>
+
+				<section>
+					<h2>Comandos úteis</h2>
+					<code><i class="blink_text fa fa-terminal"></i> git reset HEAD~1</code>
+					<p>Volta o HEAD para um commit atrás. Extremamente perigoso!</p>
+					<p>Melhor forma de desfazer commits é com <b>git revert</b>.</p>
 				</section>
 
 				<section>
